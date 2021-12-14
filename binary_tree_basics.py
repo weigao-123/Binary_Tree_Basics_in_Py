@@ -1,3 +1,8 @@
+"""
+Some basic binary tree introduction.
+Source: http://cslibrary.stanford.edu/110/BinaryTrees.html#csoln
+"""
+
 class TreeNode():
     def __init__(self, val=0, left=None, right=None):
         self.val = val
