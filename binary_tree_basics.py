@@ -1,5 +1,5 @@
 """
-Some basic binary tree introduction.
+Basic binary tree introduction with some common problems.
 Source: http://cslibrary.stanford.edu/110/BinaryTrees.html#csoln
 """
 
