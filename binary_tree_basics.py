@@ -118,13 +118,13 @@ def hasPathSum(root, target):
     and check to see if the sum is 0 when you run out of tree.
     
     """
-    if not root and not target:
-        return True
-    elif not root:
+    if not root:
         return False
+    elif not root.left and not root.right:
+        return root.val == targetSum
     else:
-        remain = target - root.val
-        return hasPathSum(root.left, remain) or hasPathSum(root.right, remain)
+        remain = targetSum - root.val
+        return self.hasPathSum(root.left, remain) or self.hasPathSum(root.right, remain)
     
 def printPaths(root):
     """
