@@ -147,10 +147,12 @@ def printPaths(root):
             paths.append(pathArr.copy())     # important to avoid reference assignment
             print(pathArr)
         else:
-            printPathsRecur(root.left, pathArr)
-            pathArr.pop()
-            printPathsRecur(root.right, pathArr)
-            pathArr.pop()
+            if root.left:
+                printPathsRecur(root.left, pathArr)
+                pathArr.pop()
+            if root.right:
+                printPathsRecur(root.right, pathArr)
+                pathArr.pop()
         return paths
     paths = printPathsRecur(root, [])
     return paths
